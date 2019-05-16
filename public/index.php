@@ -20,8 +20,11 @@
   $view = require __DIR__ . '/../src/routes/view.php';
   $view($app);
 
-  $user = require __DIR__ . '/../src/routes/user.php';
+  $user = require __DIR__ . '/../src/routes/user.php'; // router för user
   $user($app);
+
+  $entry= require __DIR__ . '/../src/routes/entries.php'; // router för entries
+  $entry($app);
 
   // Run app
   $app->run();

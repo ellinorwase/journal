@@ -12,4 +12,11 @@ return function ($app) {
 
     return $response->withJson($user->getUserByID($userID));
   })->add($auth);
+
+  $app->get('/users', function ($request, $response) {
+    // klassen User i User.php
+    $user = new User($this->db);
+
+    return $response->withJson($user->getAllUsers());
+  })->add($auth);
 };
