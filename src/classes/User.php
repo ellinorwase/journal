@@ -8,4 +8,11 @@ class User extends Mapper {
     ]);
     return $statement->fetch(PDO::FETCH_ASSOC);
   }
+
+  public function getAllUsers() {
+    $statement = $this->db->prepare("SELECT * FROM users");
+    $statement->execute();
+    return $statement->fetchAll(PDO::FETCH_ASSOC);
+
+}
 }
