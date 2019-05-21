@@ -35,8 +35,34 @@ renderView(views.login)
 renderView(views.register)
 
 
-fetch ('api/users')
-.then (response => response.json())
-.then (data=> {
-  console.log(data);
+const loginForm = document.querySelector("#loginForm")
+loginForm.addEventListener('submit', event => {
+  event.preventDefault();
+  console.log("hej ", event);
+
+  const formData = new FormData (loginForm)
+  fetch ('api/login', {
+    method: 'POST',
+    body: formData
+  }) .then(response => {
+    if(!response.ok){
+      return Error(response.statusText)
+    }else{
+      renderView(view.loggedIn)
+      return response.json();
+    }
+  }).catch(error=>{
+    console.log(error);
+  })
+})
+
+const registerForm = document.getElementById("registerForm");
+registerForm.addEventListener('submit', event => {
+  event.preventDefault();
+  fetch ('/api/register')
+  .then (response => response.json())
+  .then (data=> {
+    console.log(data);
+  })
+
 })

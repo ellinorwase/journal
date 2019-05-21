@@ -10,33 +10,38 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 <body>
-<template id="loginFormTemplate">
-  <h2>Login</h2>
-  <p>Här ska login formuläret vara</p>
-  <label>Användarnamn: </label>
-  <br>
-    <input type="text" name="username" class="login">
-    <br> <br>
-    <label>Lösenord: </label>
-    <br>
-    <input type="password" name="password" class="login">
-    <br> <br>
-    <input type="submit" value="Logga in" class="index-button">
-</template>
-<template id="registerFormTemplate">
-  <br>
-  <h2>Register User</h2>
-  <p>Här ska ska man kunna registrera en användare</p>
-    <label>Användarnamn: </label>
-    <br>
-    <input type="text" name="username" class="login">
-    <br> <br>
-    <label>Lösenord: </label>
-    <br>
-    <input type="password" name="password" class="login">
-    <br> <br>
-    <input type="submit" value="Logga in" class="index-button">
-</template>
+  <div class="loginRegister">
+    <template id="loginFormTemplate">
+      <br>
+      <h2>Logga in</h2>
+      <form method="POST" id="loginForm">
+        <label>Användarnamn: </label>
+        <br>
+        <input type="text" name="username" class="login">
+        <br> <br>
+        <label>Lösenord: </label>
+        <br>
+        <input type="password" name="password" class="login">
+        <br> <br>
+        <input type="submit" value="Logga in" class="index-button">
+      </form>
+    </template>
+    <template id="registerFormTemplate">
+      <br>
+      <h2>Registrera Användare</h2>
+      <form method="POST" id="registerForm">
+        <label>Användarnamn: </label>
+        <br>
+        <input type="text" name="username" class="login">
+        <br> <br>
+        <label>Lösenord: </label>
+        <br>
+        <input type="password" name="password" class="login">
+        <br> <br>
+        <input type="submit" value="Logga in" class="index-button">
+      </form>
+    </template>
+  </div>
 
   <div class="container">
   <header>
@@ -44,6 +49,8 @@
   </header>
   
   <main>
+
+    <!-- Innehåll -->
 
   </main>
   </div>

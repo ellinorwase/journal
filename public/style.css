@@ -1,4 +1,7 @@
 /* All style skrivs här */
+div.container{
+  background: rgba(181, 181, 181, 0.164);
+}
 body {
   background: #ecf0f1;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -15,6 +18,9 @@ header>h1 {
   padding: 20px;
   font-family: serif;
   font-size: 4em;
+}
+label{
+  font-size: 24px;
 }
 
 header{
