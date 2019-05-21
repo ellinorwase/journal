@@ -13,6 +13,7 @@ return function ($app) {
     return $response->withJson($user->getUserByID($userID));
   })->add($auth);
 
+
   // Hämtar alla användare 
     $app->get('/users', function ($request, $response) {
       // klassen User i User.php
@@ -21,6 +22,7 @@ return function ($app) {
       return $response->withJson($user->getAllUsers());
     })->add($auth);
 
+
     // Register
     $app->get('/api/register', function ($request, $response) {
       // klassen User i User.php
@@ -28,4 +30,5 @@ return function ($app) {
   
       return $response->withJson($user->registerUser());
     });
+
 };
