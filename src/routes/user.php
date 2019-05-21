@@ -20,4 +20,12 @@ return function ($app) {
   
       return $response->withJson($user->getAllUsers());
     })->add($auth);
+
+    // Register
+    $app->get('/api/register', function ($request, $response) {
+      // klassen User i User.php
+      $user = new User($this->db);
+  
+      return $response->withJson($user->registerUser());
+    });
 };
